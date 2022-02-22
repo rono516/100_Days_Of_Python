@@ -7,9 +7,11 @@ cap = cv.VideoCapture('outputmyvideo.avi')
 #listener
 while(cap.isOpened()):
     ret, frame = cap.read()
-    cv.imshow('frameVideoTitle', frame)
+    # cv.imshow('frameVideoTitle', frame)
     
-    if cv.waitKey(1) & 0xFF == ord('q'):    
+    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
+    cv.imshow("Gray Scale", gray)
+    if cv.waitKey(100) & 0xFF == ord('q'):    
         break
 cap.release()
 cv.destroyAllWindows()
