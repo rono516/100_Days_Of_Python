@@ -1,4 +1,6 @@
 class Person:
+    
+    _gender = "male"
 
     def __init__(self, name, age):
         self.name = name
@@ -8,5 +10,5 @@ class Person:
         return ("{} is coughing".format(name))
     
 Peter = Person("Rono", 12)
-print("{} is {} years old".format(Peter.name, Peter.age)) 
+print("{} is a  {} years old {}".format(Peter.name, Peter.age, Peter._gender)) 
 print(Peter.coughUp("Peter Sasa")  )           
